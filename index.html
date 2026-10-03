@@ -164,154 +164,6 @@
     .service-link svg{width:14px;height:14px;transition:transform .2s ease;}
     .service-card:hover .service-link svg{transform:translateX(2px);}
 
-    .products{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg);}
-    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-    .product-card{
-      border:1px solid var(--border);background:var(--panel);border-radius:12px;
-      overflow:hidden;display:flex;flex-direction:column;
-      transition:border-color .25s ease, transform .25s ease, box-shadow .25s ease;
-    }
-    .product-card:hover{
-      border-color:var(--accent-line);
-      transform:translateY(-4px);
-      box-shadow:0 12px 40px rgba(21,224,237,0.08);
-    }
-    .product-photo{
-      position:relative;
-      width:100%;
-      aspect-ratio: 16 / 10;
-      background:
-        linear-gradient(135deg, rgba(21,224,237,0.06), rgba(0,0,0,0) 60%),
-        linear-gradient(135deg, #0f1111, #0a0c0c);
-      border-bottom:1px solid var(--border);
-      overflow:hidden;
-      display:flex;align-items:center;justify-content:center;
-    }
-    .product-photo::after{
-      content:"";
-      position:absolute;inset:0;
-      background-image:
-        linear-gradient(rgba(21,224,237,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(21,224,237,0.05) 1px, transparent 1px);
-      background-size: 24px 24px;
-      pointer-events:none;
-    }
-    .product-photo img{
-      position:absolute;inset:0;
-      width:100%;height:100%;object-fit:cover;
-      z-index:1;
-      transition:transform .4s ease;
-    }
-    .product-card:hover .product-photo img{transform:scale(1.04);}
-    .product-photo-label{
-      position:relative;z-index:0;
-      color:var(--text-faint);
-      font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;
-    }
-    .product-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex-grow:1;}
-    .product-body h3{font-size:18px;font-weight:700;line-height:1.25;}
-    .product-body p{font-size:13.5px;color:var(--text-dim);flex-grow:1;}
-    .product-footer{
-      display:flex;align-items:center;justify-content:space-between;
-      margin-top:6px;padding-top:14px;border-top:1px solid var(--border);
-    }
-    .product-price{font-size:15px;font-weight:800;color:var(--text);}
-    .product-price small{font-size:11px;font-weight:600;color:var(--text-faint);display:block;letter-spacing:.5px;text-transform:uppercase;margin-bottom:2px;}
-    .product-cta{
-      font-size:13px;font-weight:700;color:var(--accent);
-      display:inline-flex;align-items:center;gap:6px;
-    }
-    .product-cta svg{width:13px;height:13px;transition:transform .2s ease;}
-    .product-card:hover .product-cta svg{transform:translateX(2px);}
-
-    .product-page{display:none;}
-    .product-page.active{display:block;}
-    .product-hero{
-      padding:80px 0 60px;
-      border-bottom:1px solid var(--border);
-      background:linear-gradient(180deg, rgba(21,224,237,0.03), transparent 70%);
-    }
-    .product-back{
-      display:inline-flex;align-items:center;gap:8px;
-      font-size:13px;font-weight:600;color:var(--text-dim);
-      margin-bottom:28px;
-      transition:color .2s ease;
-    }
-    .product-back:hover{color:var(--accent);}
-    .product-back svg{width:14px;height:14px;}
-    .product-detail{
-      display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:start;
-    }
-    .product-detail-photo{
-      position:relative;
-      width:100%;
-      aspect-ratio: 4 / 3;
-      border:1px solid var(--border);
-      border-radius:14px;
-      overflow:hidden;
-      background:
-        linear-gradient(135deg, rgba(21,224,237,0.06), rgba(0,0,0,0) 60%),
-        linear-gradient(135deg, #0f1111, #0a0c0c);
-      display:flex;align-items:center;justify-content:center;
-    }
-    .product-detail-photo::after{
-      content:"";
-      position:absolute;inset:0;
-      background-image:
-        linear-gradient(rgba(21,224,237,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(21,224,237,0.05) 1px, transparent 1px);
-      background-size: 32px 32px;
-      pointer-events:none;
-    }
-    .product-detail-photo img{
-      position:absolute;inset:0;
-      width:100%;height:100%;object-fit:cover;
-      z-index:1;
-    }
-    .product-detail-photo .product-photo-label{z-index:0;}
-    .product-detail-info .eyebrow{margin-bottom:12px;}
-    .product-detail-info h1{
-      font-size:clamp(28px,4vw,42px);
-      font-weight:800;
-      letter-spacing:-1px;
-      line-height:1.1;
-      margin-bottom:18px;
-    }
-    .product-detail-info .product-price{
-      font-size:24px;
-      margin-bottom:22px;
-      padding-bottom:22px;
-      border-bottom:1px solid var(--border);
-    }
-    .product-detail-info .product-price small{font-size:11px;}
-    .product-detail-info > p{
-      font-size:15px;
-      color:var(--text-dim);
-      line-height:1.7;
-      margin-bottom:26px;
-    }
-    .product-features{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px 24px;
-      margin-bottom:32px;
-    }
-    .product-features li{
-      font-size:13.5px;
-      color:var(--text-dim);
-      display:flex;
-      align-items:flex-start;
-      gap:9px;
-      line-height:1.5;
-    }
-    .product-features li svg{
-      width:15px;height:15px;
-      color:var(--accent);
-      flex-shrink:0;
-      margin-top:3px;
-    }
-    .product-actions{display:flex;gap:12px;flex-wrap:wrap;}
-
     .contact-form-wrap{display:grid;grid-template-columns:1.05fr .95fr;border:1px solid var(--border);background:var(--panel);border-radius:14px;overflow:hidden;margin-top:28px;}
     .contact-form{padding:30px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:20px;}
     .form-field{display:flex;flex-direction:column;gap:8px;}
@@ -375,8 +227,6 @@
       .why-grid{grid-template-columns:repeat(2,1fr);}
       .team-grid{grid-template-columns:1fr;max-width:400px;}
       .service-grid{grid-template-columns:repeat(2,1fr);}
-      .product-grid{grid-template-columns:repeat(2,1fr);}
-      .product-detail{grid-template-columns:1fr;gap:32px;}
       .contact-form-wrap{grid-template-columns:1fr;}
       .contact-form{border-right:0;border-bottom:1px solid var(--border);}
       .footer-top{grid-template-columns:1fr 1fr;}
@@ -384,8 +234,6 @@
     @media (max-width:560px){
       .why-grid{grid-template-columns:1fr;}
       .service-grid{grid-template-columns:1fr;}
-      .product-grid{grid-template-columns:1fr;}
-      .product-features{grid-template-columns:1fr;}
       .footer-top{grid-template-columns:1fr;}
       .hero{padding-top:70px;}
       .support-link{display:none;}
@@ -409,7 +257,6 @@
       Centa<span class="sub">Limited</span>
     </a>
     <ul class="nav-links">
-      <li><a href="#products">Produk</a></li>
       <li><a href="#involved">Komunitas</a></li>
       <li><a href="#why">Kenapa Centa</a></li>
       <li><a href="#team">Tentang</a></li>
@@ -433,62 +280,6 @@
       <div class="hero-ctas">
         <a href="#services" class="btn">Layanan Kami</a>
         <a href="#why" class="btn btn-ghost">Kenapa Centa</a>
-      </div>
-    </section>
-
-    <section class="products" id="products">
-      <div class="wrap">
-        <h2 class="section-title">Produk Kami</h2>
-        <p class="section-desc">Produk siap pakai yang dibuat oleh Centa Limited. Dari alat keamanan hingga solusi bertenaga AI, dirancang untuk profesional yang membutuhkan keandalan dan performa.</p>
-
-        <div class="product-grid">
-
-          <a href="#product-rat" class="product-card">
-            <div class="product-photo">
-              <span class="product-photo-label">1.png</span>
-              <img src="1.png" alt="RAT" onerror="this.style.display='none'">
-            </div>
-            <div class="product-body">
-              <h3>RAT (Remote Access Tool)</h3>
-              <p>Alat administrasi jarak jauh yang ringan untuk profesional IT. Kelola, pantau, dan kendalikan banyak perangkat dari satu dasbor terenkripsi.</p>
-              <div class="product-footer">
-                <div class="product-price"><small>Mulai dari</small>Rp 250.000</div>
-                <span class="product-cta">Lihat detail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
-              </div>
-            </div>
-          </a>
-
-          <a href="#product-nfc" class="product-card">
-            <div class="product-photo">
-              <span class="product-photo-label">2.jpg</span>
-              <img src="2.jpg" alt="NFC Relay" onerror="this.style.display='none'">
-            </div>
-            <div class="product-body">
-              <h3>NFC Relay</h3>
-              <p>Perangkat NFC relay canggih untuk pengujian keamanan resmi dan riset kontrol akses. Jangkauan jauh, dapat diisi ulang, dan portabel.</p>
-              <div class="product-footer">
-                <div class="product-price"><small>Mulai dari</small>Rp 1.250.000</div>
-                <span class="product-cta">Lihat detail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
-              </div>
-            </div>
-          </a>
-
-          <a href="#product-ai" class="product-card">
-            <div class="product-photo">
-              <span class="product-photo-label">3.jpg</span>
-              <img src="3.jpg" alt="AI Call Center" onerror="this.style.display='none'">
-            </div>
-            <div class="product-body">
-              <h3>AI Call Center</h3>
-              <p>Call center cerdas bertenaga AI yang menangani pertanyaan pelanggan, mengarahkan panggilan, dan memberikan dukungan otomatis 24 jam dalam berbagai bahasa.</p>
-              <div class="product-footer">
-                <div class="product-price"><small>Mulai dari</small>Rp 4.500.000</div>
-                <span class="product-cta">Lihat detail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
-              </div>
-            </div>
-          </a>
-
-        </div>
       </div>
     </section>
 
@@ -646,108 +437,6 @@
 
   </div>
 
-  <div class="product-page" id="page-product-rat" data-route="product-rat">
-    <div class="product-hero">
-      <div class="wrap">
-        <a href="#products" class="product-back">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H6M11 18l-6-6 6-6"/></svg>
-          Kembali ke produk
-        </a>
-        <div class="product-detail">
-          <div class="product-detail-photo">
-            <span class="product-photo-label">1.png</span>
-            <img src="1.png" alt="RAT" onerror="this.style.display='none'">
-          </div>
-          <div class="product-detail-info">
-            <h1>RAT (Remote Access Tool)</h1>
-            <div class="product-price"><small>Harga</small>Rp 250.000</div>
-            <p>Alat administrasi jarak jauh yang ringan, dibangun untuk profesional IT, sysadmin, dan penyedia layanan terkelola. Terhubung ke banyak perangkat dari satu dasbor terenkripsi, pantau sistem, transfer file, dan kelola endpoint secara real-time tanpa berpindah tempat.</p>
-            <ul class="product-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Akses desktop jarak jauh real-time</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Transfer file &amp; manajer aman</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Dasbor manajemen multi-perangkat</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Pemantauan sistem &amp; peringatan</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Komunikasi terenkripsi AES-256</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Mendukung Windows, macOS &amp; Linux</li>
-            </ul>
-            <div class="product-actions">
-              <a href="https://wa.me/6287867738173?text=Halo%20Centa%20Limited%2C%20saya%20ingin%20memesan%20produk%20*RAT%20(Remote%20Access%20Tool)*" target="_blank" rel="noopener noreferrer" class="btn">Pesan via WhatsApp</a>
-              <a href="#involved" class="btn btn-ghost">Tanya sesuatu</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="product-page" id="page-product-nfc" data-route="product-nfc">
-    <div class="product-hero">
-      <div class="wrap">
-        <a href="#products" class="product-back">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H6M11 18l-6-6 6-6"/></svg>
-          Kembali ke produk
-        </a>
-        <div class="product-detail">
-          <div class="product-detail-photo">
-            <span class="product-photo-label">2.jpg</span>
-            <img src="2.jpg" alt="NFC Relay" onerror="this.style.display='none'">
-          </div>
-          <div class="product-detail-info">
-            <h1>NFC Relay</h1>
-            <div class="product-price"><small>Harga</small>Rp 1.250.000</div>
-            <p>Perangkat NFC relay canggih yang dibangun untuk pengujian keamanan resmi dan riset kontrol akses. Memperluas sinyal NFC hingga jarak jauh, memungkinkan penetration tester dan red team mengevaluasi keamanan sistem akses berbasis kartu secara nyata dalam lingkungan yang terkendali dan etis.</p>
-            <ul class="product-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Ekstensi sinyal NFC jarak jauh</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Kompatibel dengan sebagian besar kartu akses</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Baterai isi ulang (8+ jam)</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Desain ringkas &amp; portabel</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Dibuat untuk audit keamanan resmi</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Termasuk tas pelindung</li>
-            </ul>
-            <div class="product-actions">
-              <a href="https://wa.me/6287867738173?text=Halo%20Centa%20Limited%2C%20saya%20ingin%20memesan%20produk%20*NFC%20Relay*" target="_blank" rel="noopener noreferrer" class="btn">Pesan via WhatsApp</a>
-              <a href="#involved" class="btn btn-ghost">Tanya sesuatu</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="product-page" id="page-product-ai" data-route="product-ai">
-    <div class="product-hero">
-      <div class="wrap">
-        <a href="#products" class="product-back">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H6M11 18l-6-6 6-6"/></svg>
-          Kembali ke produk
-        </a>
-        <div class="product-detail">
-          <div class="product-detail-photo">
-            <span class="product-photo-label">3.jpg</span>
-            <img src="3.jpg" alt="AI Call Center" onerror="this.style.display='none'">
-          </div>
-          <div class="product-detail-info">
-            <h1>AI Call Center</h1>
-            <div class="product-price"><small>Harga</small>Rp 4.500.000</div>
-            <p>Solusi call center cerdas bertenaga AI yang menangani pertanyaan pelanggan, mengarahkan panggilan ke agen yang tepat, dan memberikan dukungan otomatis 24 jam dalam berbagai bahasa. Dibangun untuk mengurangi biaya operasional sekaligus menjaga kepuasan pelanggan, didukung pemahaman bahasa alami modern.</p>
-            <ul class="product-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Pemahaman bahasa alami</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Dukungan multi-bahasa</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Routing panggilan otomatis &amp; cerdas</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Dasbor analitik real-time</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Siap integrasi dengan CRM</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Dukungan otomatis 24/7</li>
-            </ul>
-            <div class="product-actions">
-              <a href="https://wa.me/6287867738173?text=Halo%20Centa%20Limited%2C%20saya%20ingin%20memesan%20produk%20*AI%20Call%20Center*" target="_blank" rel="noopener noreferrer" class="btn">Pesan via WhatsApp</a>
-              <a href="#involved" class="btn btn-ghost">Tanya sesuatu</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </main>
 
 <footer>
@@ -774,19 +463,10 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Produk</h4>
-        <ul>
-          <li><a href="#product-rat">RAT (Remote Access Tool)</a></li>
-          <li><a href="#product-nfc">NFC Relay</a></li>
-          <li><a href="#product-ai">AI Call Center</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
         <h4>Sumber Daya</h4>
         <ul>
           <li><a href="#">Artikel</a></li>
           <li><a href="#involved">Komunitas</a></li>
-          <li><a href="#products">Produk</a></li>
           <li><a href="#why">Kenapa Centa</a></li>
           <li><a href="#services">Layanan</a></li>
         </ul>
@@ -797,6 +477,15 @@
           <li><a href="#team">Tim</a></li>
           <li><a href="#">Partner</a></li>
           <li><a href="#">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Ikuti Kami</h4>
+        <ul>
+          <li><a href="https://instagram.com/centa.ltd" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://github.com/centalimited" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://discord.com/users/centa.ltd" target="_blank" rel="noopener noreferrer">Discord</a></li>
+          <li><a href="https://wa.me/6287867738173" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
         </ul>
       </div>
     </div>
@@ -892,48 +581,6 @@
 
     window.open(waLink, '_blank');
   });
-
-  const mainContent = document.getElementById('main-content');
-  const productPages = document.querySelectorAll('.product-page');
-
-  function scrollToAnchor(hash) {
-    if (!hash || hash === '#' || hash === '#top') {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-      return;
-    }
-    const el = document.querySelector(hash);
-    if (el) {
-      requestAnimationFrame(() => {
-        el.scrollIntoView({ behavior: 'auto', block: 'start' });
-      });
-    }
-  }
-
-  function route() {
-    const hash = window.location.hash;
-    let matched = null;
-
-    productPages.forEach(p => {
-      p.classList.remove('active');
-      if (hash === '#' + p.dataset.route) matched = p;
-    });
-
-    if (matched) {
-      mainContent.style.display = 'none';
-      matched.classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    } else {
-      const wasHidden = mainContent.style.display === 'none';
-      mainContent.style.display = '';
-      if (wasHidden) {
-        scrollToAnchor(hash);
-      }
-    }
-  }
-
-  window.addEventListener('hashchange', route);
-  window.addEventListener('load', route);
-  route();
 </script>
 
 </body>
